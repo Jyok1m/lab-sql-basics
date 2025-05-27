@@ -109,7 +109,7 @@ ORDER BY date, duration;
 SELECT account_id, type, SUM(amount) as total_amount
 FROM trans
 WHERE account_id == 396
-  AND (type == "VYDAJ"
-    OR type == "PRIJEM")
+  AND (type == 'VYDAJ'
+    OR type == 'PRIJEM')
 GROUP BY type
 ORDER BY type
