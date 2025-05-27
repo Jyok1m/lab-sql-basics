@@ -42,6 +42,11 @@ WHERE duration = 60
 ORDER BY amount;
 
 -- Query 8: What are the unique values of k_symbol in the order table?
-SELECT "order".k_symbol
+SELECT k_symbol
 FROM "order"
-GROUP BY k_symbol
+GROUP BY k_symbol;
+
+-- Query 9: In the order table, what are the order_ids of the client with the account_id 34?
+SELECT order_id
+FROM "order"
+WHERE account_id = 34;
