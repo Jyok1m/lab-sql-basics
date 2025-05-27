@@ -68,3 +68,10 @@ FROM trans
 WHERE account_id = 793
 ORDER BY date DESC
 LIMIT 10;
+
+--Query 13: In the client table, of all districts with a district_id lower than 10, how many clients are from each district_id? Show the results sorted by the district_id in ascending order.
+SELECT district_id, count(client_id)
+FROM client
+WHERE district_id < 10
+GROUP BY district_id
+ORDER BY district_id
