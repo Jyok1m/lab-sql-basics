@@ -55,5 +55,9 @@ WHERE account_id = 34;
 SELECT account_id
 FROM "order"
 WHERE (order_id >= 29540 AND order_id <= 29560)
-GROUP BY account_id
+GROUP BY account_id;
 
+-- Query 11: In the order table, what are the individual amounts that were sent to (account_to) id 30067122?
+SELECT amount
+FROM "order"
+WHERE account_to = 30067122;
