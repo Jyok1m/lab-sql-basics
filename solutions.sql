@@ -50,3 +50,10 @@ GROUP BY k_symbol;
 SELECT order_id
 FROM "order"
 WHERE account_id = 34;
+
+-- Query 10: In the order table, which account_ids were responsible for orders between order_id 29,540 and order_id 29,560 (inclusive)?
+SELECT account_id
+FROM "order"
+WHERE (order_id >= 29540 AND order_id <= 29560)
+GROUP BY account_id
+
