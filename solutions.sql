@@ -21,4 +21,10 @@ limit 3;
 SELECT status
 FROM loan
 GROUP BY status
-ORDER BY status
+ORDER BY status;
+
+-- Query 5: What is the loan_id of the highest payment received in the loan table?
+SELECT loan_id
+FROM loan
+ORDER BY payments DESC
+LIMIT 1
