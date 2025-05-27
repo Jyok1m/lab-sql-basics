@@ -27,4 +27,16 @@ ORDER BY status;
 SELECT loan_id
 FROM loan
 ORDER BY payments DESC
-LIMIT 1
+LIMIT 1;
+
+-- Query 6: What are the account_ids with the lowest loan amount that have a loan duration of 60 in the loan table?
+SELECT account_id, amount
+FROM loan
+ORDER BY account_id
+LIMIT 5;
+
+-- Query 7: What are the account_ids with the lowest loan amount that have a loan duration of 60 in the loan table?
+SELECT account_id
+FROM loan
+WHERE duration = 60
+ORDER BY amount;
