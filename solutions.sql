@@ -81,3 +81,11 @@ SELECT type, count(type)
 FROM card
 GROUP BY type
 ORDER BY count(type) DESC;
+
+-- Query 15: Using the loan table, print the top 10 account_ids based on the sum of their loan amounts.
+SELECT account_id, sum(amount)
+FROM loan
+GROUP BY account_id
+ORDER BY sum(amount) DESC
+LIMIT 10;
+
