@@ -40,3 +40,8 @@ SELECT account_id
 FROM loan
 WHERE duration = 60
 ORDER BY amount;
+
+-- Query 8: What are the unique values of k_symbol in the order table?
+SELECT "order".k_symbol
+FROM "order"
+GROUP BY k_symbol
